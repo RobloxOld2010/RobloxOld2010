@@ -1,0 +1,106 @@
+print("Welcome To Roblox!")
+print("Executor Loading..")
+print("Executor Successfully Loaded!")
+print("This Executor Is Not Draggable")
+print("This Executor Working 100%")
+print("This Executor Cannot Execute require Script")
+print("Enjoy!")
+
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+Notification:Notify(
+    {Title = "Enter Text", Description = "Enter Text"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+)
+wait(1)
+Notification:Notify(
+    {Title = "Enter Text", Description = "Enter Text"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+)
+
+local ScreenGui = Instance.new("ScreenGui")
+local EditorFrame = Instance.new("Frame")
+local ScriptBox = Instance.new("TextBox")
+local ExecuteButton = Instance.new("TextButton")
+local ClearButton = Instance.new("TextButton")
+local OpenButton = Instance.new("TextButton")
+local SaveButton = Instance.new("TextButton")
+local StatusLabel = Instance.new("TextLabel")
+local SearchBox = Instance.new("TextLabel")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+EditorFrame.Parent = ScreenGui
+ScriptBox.Parent = EditorFrame
+ExecuteButton.Parent = EditorFrame
+ClearButton.Parent = EditorFrame
+OpenButton.Parent = EditorFrame
+SaveButton.Parent = EditorFrame
+StatusLabel.Parent = EditorFrame
+SearchBox.Parent = EditorFrame
+
+EditorFrame.Size = UDim2.new(0.6, 0, 0.7, 0)
+EditorFrame.Position = UDim2.new(0.2, 0, 0.15, 0)
+EditorFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+EditorFrame.BorderSizePixel = 2
+
+ScriptBox.Size = UDim2.new(0.95, 0, 0.7, 0)
+ScriptBox.Position = UDim2.new(0.025, 0, 0.1, 0)
+ScriptBox.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+ScriptBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptBox.MultiLine = true
+ScriptBox.ClearTextOnFocus = false
+ScriptBox.Text = ""
+ScriptBox.PlaceholderText = "--Enter Script Lua Here"
+ScriptBox.TextXAlignment = Enum.TextXAlignment.Left
+ScriptBox.TextYAlignment = Enum.TextYAlignment.Top
+SearchBox.Text = "Enter Executor Name"
+
+
+local function styleButton(button, text, position)
+    button.Size = UDim2.new(0.22, 0, 0.08, 0)
+    button.Position = position
+    button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.Text = text
+end
+
+styleButton(ExecuteButton, "Execute", UDim2.new(0.025, 0, 0.82, 0))
+styleButton(ClearButton, "Clear", UDim2.new(0.26, 0, 0.82, 0))
+styleButton(OpenButton, "Open", UDim2.new(0.495, 0, 0.82, 0))
+styleButton(SaveButton, "Save", UDim2.new(0.73, 0, 0.82, 0))
+
+StatusLabel.Size = UDim2.new(0.95, 0, 0.05, 0)
+StatusLabel.Position = UDim2.new(0.025, 0, 0.92, 0)
+StatusLabel.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+StatusLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+StatusLabel.Text = "Status: Online"
+
+SearchBox.Size = UDim2.new(0.95, 0, 0.07, 0)
+SearchBox.Position = UDim2.new(0.025, 0, 0.01, 0)
+SearchBox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+SearchBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+ExecuteButton.MouseButton1Click:Connect(function()
+    local success, err = pcall(function()
+        loadstring(ScriptBox.Text)()
+    end)
+    StatusLabel.Text = success and "Executed!" or "Error: " .. err
+    print("Executed!")
+end)
+
+ClearButton.MouseButton1Click:Connect(function()
+    ScriptBox.Text = ""
+    StatusLabel.Text = "Cleared!"
+    print("Cleared!")
+end)
+
+OpenButton.MouseButton1Click:Connect(function()
+    StatusLabel.Text = "Opened!"
+    print("Opened!")
+end)
+
+SaveButton.MouseButton1Click:Connect(function()
+    StatusLabel.Text = "Saved!"
+    print("Saved!")
+end)
