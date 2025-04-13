@@ -18,6 +18,15 @@ SaveButton.Parent = EditorFrame
 StatusLabel.Parent = EditorFrame
 SearchBox.Parent = EditorFrame
 
+EditorFrame.Draggable = true
+ScriptBox.Draggable = true
+ExecuteButton.Draggable = true
+ClearButton.Draggable = true
+OpenButton.Draggable = true
+SaveButton.Draggable = true
+StatusLabel.Draggable = true
+SearchBox.Draggable = true
+
 EditorFrame.Size = UDim2.new(0.6, 0, 0.7, 0)
 EditorFrame.Position = UDim2.new(0.2, 0, 0.15, 0)
 EditorFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
