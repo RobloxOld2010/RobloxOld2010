@@ -1,9 +1,23 @@
-print("Hello World!")
+print("Welcome To Roblox!")
+print("RoScripts Loading..")
 print("RoScripts Executor Successfully Loaded!")
 print("This Executor Is Not Draggable")
 print("This Executor Working 100%")
 print("This Executor Cannot Execute require Script")
 print("Enjoy!")
+
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+Notification:Notify(
+    {Title = "RoScripts", Description = "RoScripts Succesfully Loaded!"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+)
+wait(1)
+Notification:Notify(
+    {Title = "RoScripts", Description = "RoScripts Succesfully Loaded!"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+)
 
 local ScreenGui = Instance.new("ScreenGui")
 local EditorFrame = Instance.new("Frame")
