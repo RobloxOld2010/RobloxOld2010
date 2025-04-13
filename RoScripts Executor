@@ -64,17 +64,22 @@ ExecuteButton.MouseButton1Click:Connect(function()
     local success, err = pcall(function()
         loadstring(ScriptBox.Text)()
     end)
-    StatusLabel.Text = success and "Execution Successful" or "Error: " .. err
+    StatusLabel.Text = success and "Executed!" or "Error: " .. err
+    print("Executed!")
 end)
 
 ClearButton.MouseButton1Click:Connect(function()
     ScriptBox.Text = ""
+    StatusLabel.Text = "Cleared!"
+    print("Cleared!")
 end)
 
 OpenButton.MouseButton1Click:Connect(function()
-    StatusLabel.Text = "Open button clicked!"
+    StatusLabel.Text = "Opened!"
+    print("Opened!")
 end)
 
 SaveButton.MouseButton1Click:Connect(function()
-    StatusLabel.Text = "Save button clicked!"
+    StatusLabel.Text = "Saved!"
+    print("Saved!")
 end)
