@@ -10,6 +10,11 @@ local NotificationHolder = loadstring(game:HttpGet("https://raw.githubuserconten
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 
 Notification:Notify(
+    {Title = "RoScripts", Description = "Welcome To RoScripts!"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+)
+wait(1)
+Notification:Notify(
     {Title = "RoScripts", Description = "RoScripts Loading.."},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 )
@@ -18,6 +23,12 @@ Notification:Notify(
     {Title = "RoScripts", Description = "RoScripts Succesfully Loaded!"},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 )
+wait(1)
+Notification:Notify(
+    {Title = "RoScripts", Description = "Enjoy!"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+)
+
 
 local ScreenGui = Instance.new("ScreenGui")
 local EditorFrame = Instance.new("Frame")
