@@ -29,6 +29,7 @@ local SaveButton = Instance.new("TextButton")
 local StatusLabel = Instance.new("TextLabel")
 local SearchBox = Instance.new("TextLabel")
 local CloseButton = Instance.new("TextButton")
+local OpenButton = Instance.new("TextButton")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 EditorFrame.Parent = ScreenGui
@@ -66,10 +67,17 @@ local function styleButton(button, text, position)
 end
 
 CloseButton.Text = "Close Ui"
+CloseButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 CloseButton.Draggable = true
 CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.Size = UDim2.new(0.22, 0, 0.08, 0)
 CloseButton.Position = UDim2.new(0.025, 0, 0.01, 0)
+OpenButton.Position = UDim2.new(0.025, 0, 0.01, 0)
+OpenButton.Size = UDim2.new(0.22, 0, 0.08, 0)
+OpenButton.Text = "Open Ui"
+OpenButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenButton.Draggable = true
+OpenButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 
 styleButton(ExecuteButton, "Execute", UDim2.new(0.025, 0, 0.82, 0))
 styleButton(ClearButton, "Clear", UDim2.new(0.26, 0, 0.82, 0))
@@ -113,6 +121,13 @@ SaveButton.MouseButton1Click:Connect(function()
 end)
 
 CloseButton.MouseButton1Click:Connect(function()
-    print("Hello World!")
+    StatusLabel.Text = "Closed Ui!"
+    print("Closed Ui!")
+    
 end)
 
+OpenButton.MouseButton1Click:Connect(function()
+    print("Opened Ui!")
+    StatusLabel.Text = "Opened Ui!"
+    
+end)
