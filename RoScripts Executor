@@ -29,9 +29,6 @@ Notification:Notify(
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 )
 
-local part1 = Instance.new("part",Torso)
-local part2 = Instance.new("part",Torso)
-local part3 = Instance.new("part",Torso)
 local ScreenGui = Instance.new("ScreenGui")
 local EditorFrame = Instance.new("Frame")
 local ScriptBox = Instance.new("TextBox")
