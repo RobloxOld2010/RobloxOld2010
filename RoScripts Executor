@@ -29,7 +29,7 @@ local SaveButton = Instance.new("TextButton")
 local StatusLabel = Instance.new("TextLabel")
 local SearchBox = Instance.new("TextLabel")
 local CloseButton = Instance.new("TextButton")
-local OpenButton = Instance.new("TextButton")
+local OpenButton1 = Instance.new("TextButton")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 EditorFrame.Parent = ScreenGui
@@ -41,7 +41,7 @@ SaveButton.Parent = EditorFrame
 StatusLabel.Parent = EditorFrame
 SearchBox.Parent = EditorFrame
 CloseButton.Parent = EditorFrame
-OpenButton.Parent = EditorFrame
+OpenButton1.Parent = EditorFrame
 
 EditorFrame.Size = UDim2.new(0.6, 0, 0.7, 0)
 EditorFrame.Position = UDim2.new(0.2, 0, 0.15, 0)
@@ -74,12 +74,12 @@ CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.Size = UDim2.new(0.22, 0, 0.08, 0)
 CloseButton.Position = UDim2.new(0.025, 0, 0.01, 0)
 
-OpenButton.Position = UDim2.new(0.025, 0, 0.01, 0)
-OpenButton.Size = UDim2.new(0.22, 0, 0.08, 0)
-OpenButton.Text = "Open Ui"
-OpenButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-OpenButton.Draggable = true
-OpenButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+OpenButton1.Position = UDim2.new(0.025, 0, 0.01, 0)
+OpenButton1.Size = UDim2.new(0.22, 0, 0.08, 0)
+OpenButton1.Text = "Open Ui"
+OpenButton1.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenButton1.Draggable = true
+OpenButton1.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 
 styleButton(ExecuteButton, "Execute", UDim2.new(0.025, 0, 0.82, 0))
 styleButton(ClearButton, "Clear", UDim2.new(0.26, 0, 0.82, 0))
@@ -128,7 +128,7 @@ CloseButton.MouseButton1Click:Connect(function()
     
 end)
 
-OpenButton.MouseButton1Click:Connect(function()
+OpenButton1.MouseButton1Click:Connect(function()
     print("Opened Ui!")
     StatusLabel.Text = "Opened Ui!"
     
