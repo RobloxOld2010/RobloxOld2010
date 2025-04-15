@@ -28,6 +28,7 @@ local OpenButton = Instance.new("TextButton")
 local SaveButton = Instance.new("TextButton")
 local StatusLabel = Instance.new("TextLabel")
 local SearchBox = Instance.new("TextLabel")
+local CloseButton = Instance.new("TextButton")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 EditorFrame.Parent = ScreenGui
@@ -38,6 +39,7 @@ OpenButton.Parent = EditorFrame
 SaveButton.Parent = EditorFrame
 StatusLabel.Parent = EditorFrame
 SearchBox.Parent = EditorFrame
+CloseButton.Parent = EditorFrame
 
 EditorFrame.Size = UDim2.new(0.6, 0, 0.7, 0)
 EditorFrame.Position = UDim2.new(0.2, 0, 0.15, 0)
@@ -62,6 +64,12 @@ local function styleButton(button, text, position)
     button.TextColor3 = Color3.fromRGB(255, 255, 255)
     button.Text = text
 end
+
+CloseButton.Text = "Close Ui"
+CloseButton.Draggable = true
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.Size = UDim2.new(0.22, 0, 0.08, 0)
+CloseButton.Position = UDim2.new(0.5, 0, 0.82, 0))
 
 styleButton(ExecuteButton, "Execute", UDim2.new(0.025, 0, 0.82, 0))
 styleButton(ClearButton, "Clear", UDim2.new(0.26, 0, 0.82, 0))
@@ -103,3 +111,8 @@ SaveButton.MouseButton1Click:Connect(function()
     StatusLabel.Text = "Saved!"
     print("Saved!")
 end)
+
+CloseButton.MouseButton1Click:Connect(function()
+    print("Hello World!")
+end)
+
