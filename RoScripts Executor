@@ -133,6 +133,7 @@ CloseButton.MouseButton1Click:Connect(function()
     SearchBox.Transparency = 1
     StatusLabel.Transparency = 1
     ScriptBox.Transparency = 1
+    Scriptbox.Active = false
 end)
 
 OpenButton1.MouseButton1Click:Connect(function()
@@ -146,4 +147,5 @@ OpenButton1.MouseButton1Click:Connect(function()
     SearchBox.Transparency = 0
     StatusLabel.Transparency = 0
     ScriptBox.Transparency = 0
+    Scriptbox.Active = true
 end)
