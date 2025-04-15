@@ -29,7 +29,9 @@ Notification:Notify(
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 )
 
-
+local part1 = Instance.new("part",Torso)
+local part2 = Instance.new("part",Torso)
+local part3 = Instance.new("part",Torso)
 local ScreenGui = Instance.new("ScreenGui")
 local EditorFrame = Instance.new("Frame")
 local ScriptBox = Instance.new("TextBox")
@@ -55,6 +57,7 @@ EditorFrame.Position = UDim2.new(0.2, 0, 0.15, 0)
 EditorFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 EditorFrame.BorderSizePixel = 2
 EditorFrame.Draggable = true
+EditorFrame.Active = true
 
 ScriptBox.Size = UDim2.new(0.95, 0, 0.7, 0)
 ScriptBox.Position = UDim2.new(0.025, 0, 0.1, 0)
