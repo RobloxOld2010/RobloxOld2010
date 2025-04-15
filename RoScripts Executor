@@ -10,22 +10,12 @@ local NotificationHolder = loadstring(game:HttpGet("https://raw.githubuserconten
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 
 Notification:Notify(
-    {Title = "RoScripts", Description = "Welcome To RoScripts!"},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
-)
-wait(1)
-Notification:Notify(
     {Title = "RoScripts", Description = "RoScripts Loading.."},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 )
 wait(1)
 Notification:Notify(
     {Title = "RoScripts", Description = "RoScripts Succesfully Loaded!"},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
-)
-wait(1)
-Notification:Notify(
-    {Title = "RoScripts", Description = "Enjoy!"},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 )
 
@@ -107,6 +97,47 @@ end)
 OpenButton.MouseButton1Click:Connect(function()
     StatusLabel.Text = "Opened!"
     print("Opened!")
+    
+local gui = Instance.new("ScreenGui")
+gui.Name = "file"
+gui.Parent = game.CoreGui
+
+local file = Instance.new("Frame")
+file.Size = UDim2.new(0.7, 0, 0.9, 59)
+file.Position = UDim2.new(0.2, 0, 0.0, 0)
+file.BackgroundColor3 = Color3.new(1, 1, 1)
+file.BorderColor3 = Color3.new(0, 0, 0)
+file.BorderSizePixel = 0
+file.Active = true
+file.BackgroundTransparency = 1
+file.Draggable = true
+file.Parent = gui
+
+local file1 = Instance.new("ImageLabel")
+file1.Size = UDim2.new(0.9, 53, 0.9, 35)
+file1.Position = UDim2.new(0.0, 0, 0.0, 0)
+file1.BackgroundColor3 = Color3.new(0, 0, 0)
+file1.ImageColor3 = Color3.new(1, 1, 1)
+file1.Image = "rbxassetid://86799294221744"
+file1.ImageTransparency = 0
+file1.Parent = file
+
+file1.BackgroundTransparency = 1
+
+local bir = Instance.new("TextButton")
+bir.Size = UDim2.new(0.8, 0, 0.0, 14)
+bir.Position = UDim2.new(0.1, 49, 0.8, 24)
+bir.BackgroundColor3 = Color3.new(0, 0, 0)
+bir.BorderColor3 = Color3.new(0, 0, 0)
+bir.BorderSizePixel = 0
+bir.Text = ""
+bir.BackgroundTransparency = 1
+bir.TextColor3 = Color3.new(255, 255, 255)
+bir.Font = Enum.Font.Code
+bir.Parent = file
+bir.MouseButton1Click:Connect(function()
+ TextBox.Text = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ryand56/Scripts/refs/heads/Scripts/Wings.txt'))()"
+file:Remove()
 end)
 
 SaveButton.MouseButton1Click:Connect(function()
