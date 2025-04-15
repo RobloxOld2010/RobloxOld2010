@@ -41,6 +41,7 @@ SaveButton.Parent = EditorFrame
 StatusLabel.Parent = EditorFrame
 SearchBox.Parent = EditorFrame
 CloseButton.Parent = EditorFrame
+OpenButton.Parent = EditorFrame
 
 EditorFrame.Size = UDim2.new(0.6, 0, 0.7, 0)
 EditorFrame.Position = UDim2.new(0.2, 0, 0.15, 0)
