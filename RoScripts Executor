@@ -74,7 +74,7 @@ CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.Size = UDim2.new(0.22, 0, 0.08, 0)
 CloseButton.Position = UDim2.new(0.025, 0, 0.01, 0)
 
-OpenButton.Position = UDim2.new(0.050, 0, 0.01, 0)
+OpenButton.Position = UDim2.new(0.025, 0, 0.01, 0)
 OpenButton.Size = UDim2.new(0.22, 0, 0.08, 0)
 OpenButton.Text = "Open Ui"
 OpenButton.TextColor3 = Color3.fromRGB(255, 255, 255)
