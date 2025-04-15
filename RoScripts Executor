@@ -41,14 +41,14 @@ local StatusLabel = Instance.new("TextLabel")
 local SearchBox = Instance.new("TextLabel")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-EditorFrame.Parent = ScreenGui
-ScriptBox.Parent = EditorFrame
-ExecuteButton.Parent = EditorFrame
-ClearButton.Parent = EditorFrame
-OpenButton.Parent = EditorFrame
-SaveButton.Parent = EditorFrame
-StatusLabel.Parent = EditorFrame
-SearchBox.Parent = EditorFrame
+SearchBox.Parent = ScreenGui
+ScriptBox.Parent = SearchBox
+ExecuteButton.Parent = SearchBox
+ClearButton.Parent = SearchBox
+OpenButton.Parent = SearchBox
+SaveButton.Parent = SearchBox
+StatusLabel.Parent = SearchBox
+EditorFrame.Parent = Searchbox
 
 EditorFrame.Size = UDim2.new(0.6, 0, 0.7, 0)
 EditorFrame.Position = UDim2.new(0.2, 0, 0.15, 0)
@@ -66,6 +66,7 @@ ScriptBox.PlaceholderText = "--Enter Script Lua Here"
 ScriptBox.TextXAlignment = Enum.TextXAlignment.Left
 ScriptBox.TextYAlignment = Enum.TextYAlignment.Top
 SearchBox.Text = "RoScripts Executor"
+SearchBox.Draggable = true
 
 
 local function styleButton(button, text, position)
