@@ -125,11 +125,25 @@ end)
 CloseButton.MouseButton1Click:Connect(function()
     StatusLabel.Text = "Closed Ui!"
     print("Closed Ui!")
-    
+    SaveButton.Active = false
+    OpenButton.Active = false
+    ClearButton.Active = false
+    ExecuteButton.Active = false
+    EditorFrame.Active = false
+    SearchBox.Active = false
+    StatusLabel.Active = false
+    ScriptBox.Active = false
 end)
 
 OpenButton1.MouseButton1Click:Connect(function()
     print("Opened Ui!")
     StatusLabel.Text = "Opened Ui!"
-    
+    SaveButton.Active = true
+    OpenButton.Active = true
+    ClearButton.Active = true
+    ExecuteButton.Active = true
+    EditorFrame.Active = true
+    SearchBox.Active = true
+    StatusLabel.Active = true
+    ScriptBox.Active = true
 end)
