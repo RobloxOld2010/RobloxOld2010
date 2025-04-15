@@ -66,6 +66,7 @@ ScriptBox.Text = ""
 ScriptBox.PlaceholderText = "--Enter Script Lua Here"
 ScriptBox.TextXAlignment = Enum.TextXAlignment.Left
 ScriptBox.TextYAlignment = Enum.TextYAlignment.Top
+ScriptBox.TextWrapped = true
 
 
 local function styleButton(button, text, position)
@@ -86,12 +87,14 @@ StatusLabel.Position = UDim2.new(0.025, 0, 0.92, 0)
 StatusLabel.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 StatusLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
 StatusLabel.Text = "Status: Online"
+StatusLabel.TextWrapped = true
 
 SearchBox.Size = UDim2.new(0.95, 0, 0.07, 0)
 SearchBox.Position = UDim2.new(0.025, 0, 0.01, 0)
 SearchBox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 SearchBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 SearchBox.Text = "RoScripts Executor"
+SearchBox.TextWrapped = true
 
 ExecuteButton.MouseButton1Click:Connect(function()
     local success, err = pcall(function()
@@ -116,3 +119,8 @@ SaveButton.MouseButton1Click:Connect(function()
     StatusLabel.Text = "Saved!"
     print("Saved!")
 end)
+
+SaveButton.TextWrapped = true
+OpenButton.TextWrapped = true
+ClearButton.TextWrapped = true
+ExecuteButton.TextWrapped = true
