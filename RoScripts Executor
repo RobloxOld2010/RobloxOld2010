@@ -41,7 +41,7 @@ SaveButton.Parent = EditorFrame
 StatusLabel.Parent = EditorFrame
 SearchBox.Parent = EditorFrame
 CloseButton.Parent = EditorFrame
-OpenButton1.Parent = EditorFrame
+OpenButton1.Parent = ScreenGui
 
 EditorFrame.Size = UDim2.new(0.6, 0, 0.7, 0)
 EditorFrame.Position = UDim2.new(0.2, 0, 0.15, 0)
@@ -81,6 +81,8 @@ OpenButton1.Text = "Open Ui"
 OpenButton1.TextColor3 = Color3.fromRGB(255, 255, 255)
 OpenButton1.Draggable = false
 OpenButton1.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+OpenButton1.Active = false
+OpenButton1.Transparency = 1
 
 styleButton(ExecuteButton, "Execute", UDim2.new(0.025, 0, 0.82, 0))
 styleButton(ClearButton, "Clear", UDim2.new(0.26, 0, 0.82, 0))
@@ -137,6 +139,8 @@ CloseButton.MouseButton1Click:Connect(function()
     ScriptBox.Position = UDim2.new(10000, 0, 0.1, 0)
     OpenButton1.Transparency = 0
     OpenButton1.Active = true
+    CloseButton.Active = false
+    CloseButton1.Transparency = 1
 end)
 
 OpenButton1.MouseButton1Click:Connect(function()
@@ -153,4 +157,6 @@ OpenButton1.MouseButton1Click:Connect(function()
     ScriptBox.Position = UDim2.new(0.025, 0, 0.1, 0)
     CloseButton.Active = false
     CloseButton.Transparency = 1
+    OpenButton1.Active = true
+    OpenButton1.Transparency = 0
 end)
