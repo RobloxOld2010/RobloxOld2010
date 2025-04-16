@@ -140,7 +140,7 @@ CloseButton.MouseButton1Click:Connect(function()
     OpenButton1.Transparency = 0
     OpenButton1.Active = true
     CloseButton.Active = false
-    CloseButton1.Transparency = 1
+    CloseButton.Transparency = 1
 end)
 
 OpenButton1.MouseButton1Click:Connect(function()
