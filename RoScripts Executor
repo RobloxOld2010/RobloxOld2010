@@ -155,8 +155,8 @@ OpenButton1.MouseButton1Click:Connect(function()
     StatusLabel.Transparency = 0
     ScriptBox.Transparency = 0
     ScriptBox.Position = UDim2.new(0.025, 0, 0.1, 0)
-    CloseButton.Active = false
-    CloseButton.Transparency = 1
-    OpenButton1.Active = true
-    OpenButton1.Transparency = 0
+    CloseButton.Active = true
+    CloseButton.Transparency = 0
+    OpenButton1.Active = false
+    OpenButton1.Transparency = 1
 end)
