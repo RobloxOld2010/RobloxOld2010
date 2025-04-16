@@ -47,6 +47,8 @@ EditorFrame.Size = UDim2.new(0.6, 0, 0.7, 0)
 EditorFrame.Position = UDim2.new(0.2, 0, 0.15, 0)
 EditorFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 EditorFrame.BorderSizePixel = 2
+EditorFrame.Active = true
+EditorFrame.Draggable = true
 
 ScriptBox.Size = UDim2.new(0.95, 0, 0.7, 0)
 ScriptBox.Position = UDim2.new(0.025, 0, 0.1, 0)
