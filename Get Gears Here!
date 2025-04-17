@@ -6,8 +6,6 @@ local Teleport Tool = loadstring(game:HttpGet("https://pastebin.com/raw/msBbWa2J
 
 local Forcefiled = loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Forcefield-30169"))()
 
-local Ban Hammer = loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRbx/BanHammer/refs/heads/main/Rbx.lua"))()
-
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 
