@@ -54,6 +54,7 @@ UICorner:Clone().Parent = PowerBar
 PowerSlider.Parent = PowerBar
 PowerSlider.Size = UDim2.new(0.1, 0, 1, 0)
 PowerSlider.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
+PowerSlider.Text = " "
 UICorner:Clone().Parent = PowerSlider
 HideButton.Parent = ScreenGui
 HideButton.Position = UDim2.new(0.05, 0, 0.9, 0)
