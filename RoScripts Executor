@@ -1,7 +1,7 @@
 print("Welcome To Roblox!")
 print("RoScripts Loading..")
 print("RoScripts Executor Successfully Loaded!")
-print("This Executor Is Draggable")
+print("This Executor Is not Draggable")
 print("This Executor Working 100%")
 print("This Executor Cannot Execute require Script")
 print("Enjoy!")
@@ -15,7 +15,7 @@ Notification:Notify(
 )
 wait(1)
 Notification:Notify(
-    {Title = "RoScripts", Description = "RoScripts Succesfully Loaded!"},
+    {Title = "RoScripts", Description = "RoScripts Successfully Loaded!"},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 )
 
@@ -47,8 +47,6 @@ EditorFrame.Size = UDim2.new(0.6, 0, 0.7, 0)
 EditorFrame.Position = UDim2.new(0.2, 0, 0.15, 0)
 EditorFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 EditorFrame.BorderSizePixel = 2
-EditorFrame.Active = true
-EditorFrame.Draggable = true
 
 ScriptBox.Size = UDim2.new(0.95, 0, 0.7, 0)
 ScriptBox.Position = UDim2.new(0.025, 0, 0.1, 0)
@@ -141,6 +139,7 @@ CloseButton.MouseButton1Click:Connect(function()
     OpenButton1.Active = true
     CloseButton.Active = false
     CloseButton.Transparency = 1
+    EditorFrame.Position = UDim2.new(10000, 0, 0.15, 0)
 end)
 
 OpenButton1.MouseButton1Click:Connect(function()
@@ -159,4 +158,5 @@ OpenButton1.MouseButton1Click:Connect(function()
     CloseButton.Transparency = 0
     OpenButton1.Active = false
     OpenButton1.Transparency = 1
+    EditorFrame.Position = UDim2.new(0.2, 0, 0.15, 0)
 end)
