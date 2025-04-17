@@ -23,7 +23,7 @@ TextLabel.Parent = Frame
 TextLabel.BackgroundTransparency = 1
 TextLabel.Size = UDim2.new(1, 0, 0.2, 0)
 TextLabel.Font = Enum.Font.SourceSansBold
-TextLabel.Text = "Fuck Fling"
+TextLabel.Text = "Touch Fling"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 22
 
