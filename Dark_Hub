@@ -1,6 +1,18 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Dark Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+OrionLib:MakeNotification({
+	Name = "Dark Hub",
+	Content = "Welcome To Dark Hub",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
 
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
 --[[
 Name = <string> - The name of the UI.
 HidePremium = <bool> - Whether or not the user details shows Premium status or not.
@@ -111,6 +123,96 @@ Sound.Looped = false
 Sound.Volume = 1
 end)
 _G.speedcoil.Unequipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Potion",
+	Callback = function()
+      		 --potion
+_G.potion = game:GetObjects('rbxassetid://154727251')[1]
+_G.potion.Parent = game.Players.LocalPlayer.Backpack
+_G.potion.Equipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 75
+local Sound = Instance.new("Sound") 
+local Id = "12722532"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 5
+end)
+_G.potion.Unequipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 75
+end)
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Teleport Tool",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/msBbWa2J"))()
+
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Fusion",
+	Callback = function()
+      		_G.fusion = game:GetObjects('rbxassetid://119101539')[1]
+_G.fusion.Parent = game.Players.LocalPlayer.Backpack
+_G.fusion.Equipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 75
+local Sound = Instance.new("Sound") 
+local Id = "4822429705"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 5
+end)
+_G.fusion.Unequipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end) 
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Grimgold",
+	Callback = function()
+      		_G.grimgold = game:GetObjects('rbxassetid://139577901')[1]
+_G.grimgold.Parent = game.Players.LocalPlayer.Backpack
+_G.grimgold.Equipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 75
+local Sound = Instance.new("Sound") 
+local Id = "12222225"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 5
+end)
+_G.grimgold.Unequipped:Connect(function()
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 end)
   	end    
