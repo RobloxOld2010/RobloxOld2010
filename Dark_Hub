@@ -332,7 +332,7 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
 	Name = "Fling All",
 	Callback = function()
-      		
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fling-All-Script-20486"))()
   	end    
 })
 
