@@ -245,6 +245,28 @@ Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
 Tab:AddButton({
+	Name = "Tool Giver",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Tool-giver-29724"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Tool Giver V2 (Works On Workspace)",
+	Callback = function()
+      	         loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-workspace-tool-giver-ui-12089"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
 	Name = "Blackhole Gui",
 	Callback = function()
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/kokojoscripts/Lt-wave/refs/heads/main/ProjectXx"))()
