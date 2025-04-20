@@ -293,6 +293,17 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
 	Name = "Dex Explorer",
 	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/NUKE!-Build-and-Battle!-GxG-Hub-25521"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "GxG Hub Build And Battle!",
+	Callback = function()
       		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Dex-Explorer-No-Key-29915"))()
   	end    
 })
