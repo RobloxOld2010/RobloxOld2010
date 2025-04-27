@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Dark Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "RobloxFan Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
 	Name = "Main",
@@ -263,6 +263,13 @@ Tab:AddButton({
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/kokojoscripts/Lt-wave/refs/heads/main/ProjectXx"))()
   	end    
 })
+Tab:AddButton({
+	Name = "R6 Animation",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-R6-Animations-37331"))()
+  	end    
+})
+
 
 --[[
 Name = <string> - The name of the button.
