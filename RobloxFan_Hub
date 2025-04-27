@@ -1,6 +1,4 @@
-local syn = getgenv().syn
-getgenv().syn = false
-local player = game.Players.LocalPlayer local
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "RobloxFan Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
