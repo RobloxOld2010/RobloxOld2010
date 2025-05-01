@@ -19,13 +19,23 @@ Tab:AddButton({
   	end    
 })
 Tab:AddToggle({
-    Name = "Fullbright",
-    Default = true,
+    Name = "Infinite Jump",
+    Default = false,
     Callback = function(Value)
         if Value then
-            game:GetService("Lighting").Brightness = 3
+            local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
         else
-            game:GetService("Lighting").Brightness = 10
+            local InfiniteJumpEnabled = false
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
         end
     end
 })
