@@ -1,7 +1,4 @@
-
-
-local Number = print("Here Your Code : 901017")
-
+local Number = print("Here Your Code : 901072")
 local player = game.Players.LocalPlayer
 local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
 
@@ -31,21 +28,18 @@ input.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 input.TextColor3 = Color3.fromRGB(255, 255, 255)
 input.BorderSizePixel = 0
 
-local status = Instance.new("TextLabel", frame)
+local status = Instance.new("TextButton", frame)
 status.Size = UDim2.new(1, 0, 0.3, 0)
 status.Position = UDim2.new(0, 0, 0.8, 0)
-status.BackgroundTransparency = 1
-status.Text = ""
+status.BackgroundTransparency = 0
+status.Text = "Enter"
 status.TextColor3 = Color3.fromRGB(255, 255, 255)
+status.TextScaled = false
+status.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 status.TextScaled = true
-
-input.FocusLost:Connect(function()
-	if input.Text == 901072 then
-		status.Text = "Verified!"
-		wait(1)
+status.MouseButton1Click:Connect(function()
+         if input.Text == "901072" then
 		gui:Destroy()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxOld2010/RobloxOld2010/refs/heads/main/RobloxFan_Hub"))()
-	else
-		status.Text = "Try Again"
-	end
+end
 end)
