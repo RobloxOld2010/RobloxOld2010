@@ -1,50 +1,576 @@
-local Number = print("Here Your Code : 901072")
-local player = game.Players.LocalPlayer
-local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "RobloxFan Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local frame = Instance.new("Frame", gui)
-frame.Size = UDim2.new(0, 200, 0, 120)
-frame.Position = UDim2.new(0.5, -100, 0.5, -60)
-frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-frame.BorderSizePixel = 0
-frame.Active = true
-frame.Draggable = true
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
-local label = Instance.new("TextLabel", frame)
-label.Size = UDim2.new(1, 0, 0.4, 0)
-label.Position = UDim2.new(0, 0, 0, 0)
-label.BackgroundTransparency = 1
-label.Text = "Verify : "
-label.TextColor3 = Color3.fromRGB(255, 255, 255)
-label.TextScaled = true
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+Tab:AddButton({
+	Name = "R6 Script (Work On R15)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Icalock/Server/refs/heads/main/R6%20anims.lua", true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Become A Ball",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/tHPa3mfe"))()
+  	end    
+})
 
-local info = Instance.new("TextLabel", frame)
-info.Text = The Code Is In Roblox Console
-info.Size = UDim2.new(1, 0, 0.4, 0)
-info.Position = UDim2.new(1, 0, 0.4, 0)
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+local Section = Tab:AddSection({
+	Name = "I Will Add More Here!"
+})
+--[[
+Name = <string> - The name of the section.
+]]
+local Tab = Window:MakeTab({
+	Name = "Construction",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddButton({
+	Name = "Roblox Old",
+	Callback = function()
+      		
+  	end    
+})
+Tab:AddButton({
+	Name = "Day",
+	Callback = function()
+      		game:GetService("Lighting").ClockTime = 12
+  	end    
+})
+Tab:AddButton({
+	Name = "Night",
+	Callback = function()
+      	        game:GetService("Lighting").ClockTime = 0
+  	end    
+})
+Tab:AddButton({
+	Name = "Spawn A Ball",
+	Callback = function()
+      	        loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxOld2010/RobloxOld2010/refs/heads/main/Spawn%20A%20Ball"))()
+  	end    
+})
 
-local input = Instance.new("TextBox", frame)
-input.Size = UDim2.new(1, -20, 0.3, 0)
-input.Position = UDim2.new(0, 10, 0.45, 0)
-input.PlaceholderText = "Enter Code Here"
-input.Text = ""
-input.TextScaled = true
-input.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-input.TextColor3 = Color3.fromRGB(255, 255, 255)
-input.BorderSizePixel = 0
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+local Tab = Window:MakeTab({
+	Name = "Gears",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
-local status = Instance.new("TextButton", frame)
-status.Size = UDim2.new(1, 0, 0.3, 0)
-status.Position = UDim2.new(0, 0, 0.8, 0)
-status.BackgroundTransparency = 0
-status.Text = "Enter"
-status.TextColor3 = Color3.fromRGB(255, 255, 255)
-status.TextScaled = false
-status.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-status.TextScaled = true
-status.MouseButton1Click:Connect(function()
-         if input.Text == "901072" then
-		gui:Destroy()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxOld2010/RobloxOld2010/refs/heads/main/RobloxFan_Hub"))()
-end
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+Tab:AddButton({
+	Name = "F3X",
+	Callback = function()
+      		--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Flashlight",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Figure's-Library-Best-flashlight-script-24691"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Forcefield",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Forcefield-30169"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Gravity Coil",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/RNa8enhG"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Speed Coil",
+	Callback = function()
+      		--speed coil
+_G.speedcoil = game:GetObjects('rbxassetid://99119158')[1]
+_G.speedcoil.Parent = game.Players.LocalPlayer.Backpack
+_G.speedcoil.Equipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 32
+local Sound = Instance.new("Sound") 
+local Id = "99173388"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 1
 end)
+_G.speedcoil.Unequipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Potion",
+	Callback = function()
+      		 --potion
+_G.potion = game:GetObjects('rbxassetid://154727251')[1]
+_G.potion.Parent = game.Players.LocalPlayer.Backpack
+_G.potion.Equipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 75
+local Sound = Instance.new("Sound") 
+local Id = "12722532"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 5
+end)
+_G.potion.Unequipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 75
+end)
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Teleport Tool",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/msBbWa2J"))()
+
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Fusion",
+	Callback = function()
+      		_G.fusion = game:GetObjects('rbxassetid://119101539')[1]
+_G.fusion.Parent = game.Players.LocalPlayer.Backpack
+_G.fusion.Equipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 75
+local Sound = Instance.new("Sound") 
+local Id = "4822429705"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 5
+end)
+_G.fusion.Unequipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end) 
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Grimgold",
+	Callback = function()
+      		_G.grimgold = game:GetObjects('rbxassetid://139577901')[1]
+_G.grimgold.Parent = game.Players.LocalPlayer.Backpack
+_G.grimgold.Equipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 75
+local Sound = Instance.new("Sound") 
+local Id = "12222225"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 5
+end)
+_G.grimgold.Unequipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Boombox",
+	Callback = function()
+      		_G.boomboxb = game:GetObjects('rbxassetid://740618400')[1]
+_G.boomboxb.Parent = game:GetService'Players'.LocalPlayer.Backpack
+loadstring(_G.boomboxb.Client.Source)() 
+loadstring(_G.boomboxb.Server.Source)() 
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+local Tab = Window:MakeTab({
+	Name = "Gui",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+Tab:AddButton({
+	Name = "RoScripts Executor",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxOld2010/RobloxOld2010/refs/heads/main/RoScripts%20Executor"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Tool Giver",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Tool-giver-29724"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Tool Giver V2 (Works On Workspace)",
+	Callback = function()
+      	         loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-workspace-tool-giver-ui-12089"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Blackhole Gui",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/kokojoscripts/Lt-wave/refs/heads/main/ProjectXx"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "R6 Animation",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-R6-Animations-37331"))()
+  	end    
+})
+
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "God Mode",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxOld2010/Kevoid/refs/heads/main/God%20Mode"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Delta X",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Old-Delta-Executor-Ui-30987"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Dex Explorer",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/NUKE!-Build-and-Battle!-GxG-Hub-25521"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "GxG Hub Build And Battle!",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Dex-Explorer-No-Key-29915"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "R4D Brookhaven",
+	Callback = function()
+      		--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-R4D-script-no-key-17562"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Tbao Hub Natural Disaster",
+	Callback = function()
+      		--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubNaturalDisasterSurvival"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = " Xhub Murder Mystery 2",
+	Callback = function()
+      		--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Lalol Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Touch Fling",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxOld2010/RobloxOld2010/refs/heads/main/Touch-Fling"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+local Tab = Window:MakeTab({
+	Name = "Admin",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+Tab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Infinite-Yield_500"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Fates Admin",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fates-Admin-25715"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Fly Gui V3",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fly-gui-v3-33608"))()
+  	end    
+})
+
+--[[
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Fling Gui",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fling-gui-19581"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Ghost Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghost-hub-universal-27291"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "F3X",
+	Callback = function()
+      		--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Fling All",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fling-All-Script-20486"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+local Tab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+Tab:AddButton({
+	Name = "Rejoin",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Simple-ReJoin-Script-15569"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddButton({
+	Name = "Serverhop",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Gta-like-serverhop-script-1449"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Sit Script",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-simple-sit-script-24165"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+local Tab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+Tab:AddLabel("Made By : x00pder")
+Tab:AddLabel("Ui Library : Orion Library")
+Tab:AddLabel("Made In : 17/4/2025")
