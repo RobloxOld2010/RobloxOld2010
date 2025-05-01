@@ -25,18 +25,7 @@ Tab:AddToggle({
         if Value then
             game:GetService("Lighting").Brightness = 3
         else
-            game:GetService("Lighting").Brightness = 1
-        end
-    end
-})
-Tab:AddToggle({
-    Name = "Infinite Jumps",
-    Default = false,
-    Callback = function(Value)
-        if Value then
-            InfJumpEnable = false
-        else
-            InfJumpEnable = true
+            game:GetService("Lighting").Brightness = 10
         end
     end
 })
