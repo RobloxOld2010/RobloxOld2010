@@ -23,11 +23,9 @@ Tab:AddToggle({
     Default = false,
     Callback = function(Value)
         if Value then
-            game:GetService("Lighting").Brightness = 1
-            game:GetService("Lighting").ClockTime = 14
+            game:GetService("Lighting").Brightness = 3
         else
-            game:GetService("Lighting").Brightness = 5
-            game:GetService("Lighting").ClockTime = 12
+            game:GetService("Lighting").Brightness = 1
         end
     end
 })
