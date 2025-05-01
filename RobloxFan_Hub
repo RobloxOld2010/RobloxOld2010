@@ -20,7 +20,7 @@ Tab:AddButton({
 })
 Tab:AddToggle({
     Name = "Fullbright",
-    Default = false,
+    Default = true,
     Callback = function(Value)
         if Value then
             game:GetService("Lighting").Brightness = 3
