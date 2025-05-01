@@ -1,0 +1,51 @@
+
+
+local Number = print("Here Your Code : 901017")
+
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+
+local frame = Instance.new("Frame", gui)
+frame.Size = UDim2.new(0, 200, 0, 120)
+frame.Position = UDim2.new(0.5, -100, 0.5, -60)
+frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+frame.BorderSizePixel = 0
+frame.Active = true
+frame.Draggable = true
+
+local label = Instance.new("TextLabel", frame)
+label.Size = UDim2.new(1, 0, 0.4, 0)
+label.Position = UDim2.new(0, 0, 0, 0)
+label.BackgroundTransparency = 1
+label.Text = "Verify : "
+label.TextColor3 = Color3.fromRGB(255, 255, 255)
+label.TextScaled = true
+
+local input = Instance.new("TextBox", frame)
+input.Size = UDim2.new(1, -20, 0.3, 0)
+input.Position = UDim2.new(0, 10, 0.45, 0)
+input.PlaceholderText = "Enter Code Here"
+input.Text = ""
+input.TextScaled = true
+input.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+input.TextColor3 = Color3.fromRGB(255, 255, 255)
+input.BorderSizePixel = 0
+
+local status = Instance.new("TextLabel", frame)
+status.Size = UDim2.new(1, 0, 0.3, 0)
+status.Position = UDim2.new(0, 0, 0.8, 0)
+status.BackgroundTransparency = 1
+status.Text = ""
+status.TextColor3 = Color3.fromRGB(255, 255, 255)
+status.TextScaled = true
+
+input.FocusLost:Connect(function()
+	if input.Text == 901072 then
+		status.Text = "Verified!"
+		wait(1)
+		gui:Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxOld2010/RobloxOld2010/refs/heads/main/RobloxFan_Hub"))()
+	else
+		status.Text = "Try Again"
+	end
+end)
