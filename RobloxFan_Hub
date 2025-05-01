@@ -18,23 +18,36 @@ Tab:AddButton({
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/Icalock/Server/refs/heads/main/R6%20anims.lua", true))()
   	end    
 })
-Tab:AddToggle({
-    Name = "Infinite Jump",
-    Default = false,
-    Callback = function(Value)
-        if Value then
-            local InfiniteJumpEnabled = true
-        else
-            local InfiniteJumpEnabled = false
-        end
-    end
-})
 local Section = Tab:AddSection({
 	Name = "I Will Add More Here!"
 })
 --[[
 Name = <string> - The name of the section.
 ]]
+local Tab = Window:MakeTab({
+	Name = "Construction",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddButton({
+	Name = "Roblox Old",
+	Callback = function()
+      		
+  	end    
+})
+Tab:AddButton({
+	Name = "Day",
+	Callback = function()
+      		game:GetService("Lighting").ClockTime = 12
+  	end    
+})
+Tab:AddButton({
+	Name = "Night",
+	Callback = function()
+      	        game:GetService("Lighting").ClockTime = 0
+  	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Gears",
 	Icon = "rbxassetid://4483345998",
