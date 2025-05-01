@@ -18,6 +18,17 @@ Tab:AddButton({
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/Icalock/Server/refs/heads/main/R6%20anims.lua", true))()
   	end    
 })
+Tab:AddButton({
+	Name = "Become A Ball",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/tHPa3mfe"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 local Section = Tab:AddSection({
 	Name = "I Will Add More Here!"
 })
@@ -47,7 +58,17 @@ Tab:AddButton({
       	        game:GetService("Lighting").ClockTime = 0
   	end    
 })
+Tab:AddButton({
+	Name = "Spawn A Ball",
+	Callback = function()
+      	        loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxOld2010/RobloxOld2010/refs/heads/main/Spawn%20A%20Ball"))()
+  	end    
+})
 
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 local Tab = Window:MakeTab({
 	Name = "Gears",
 	Icon = "rbxassetid://4483345998",
@@ -524,7 +545,17 @@ Tab:AddButton({
       		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Gta-like-serverhop-script-1449"))()
   	end    
 })
+Tab:AddButton({
+	Name = "Sit Script",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-simple-sit-script-24165"))()
+  	end    
+})
 
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 --[[
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
