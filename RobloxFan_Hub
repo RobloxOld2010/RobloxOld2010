@@ -31,6 +31,17 @@ Tab:AddToggle({
         end
     end
 })
+Tab:AddToggle({
+    Name = "Infinite Jumps",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            InfJumpEnable = false
+        else
+            InfJumpEnable = true
+        end
+    end
+})
 local Section = Tab:AddSection({
 	Name = "I Will Add More Here!"
 })
