@@ -49,6 +49,7 @@ codeBox.TextSize = 20
 codeBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 codeBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 codeBox.Parent = frame
+codeBox.Text = ""
 
 -- Create Enter Button
 local enterButton = Instance.new("TextButton")
