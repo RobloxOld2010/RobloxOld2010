@@ -3,7 +3,7 @@ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 
 Notification:Notify(
     {Title = "RobloxFan Hub", Description = "Welcome To RobloxFan Hub!"},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 500, Type = "option"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 10, Type = "option"},
     {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84), Callback = function(State) print(tostring(State)) end}
 )
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
@@ -508,6 +508,12 @@ Tab:AddButton({
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
 loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+  	end    
+})
+"Tab:AddButton({
+	Name = "Car Fly",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
   	end    
 })
 
