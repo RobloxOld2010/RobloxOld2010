@@ -5,7 +5,7 @@ local flying = false
 -- GUI Setup
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "FlyGui"
-screengui.Parent = game.CoreGui
+screenGui.Parent = game.CoreGui
 
 -- Frame (optional for layout)
 local frame = Instance.new("Frame", screenGui)
