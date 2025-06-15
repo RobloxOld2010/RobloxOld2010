@@ -1,0 +1,90 @@
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local flying = false
+
+-- GUI Setup
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "FlyGui"
+screengui.Parent = game.CoreGui
+
+-- Frame (optional for layout)
+local frame = Instance.new("Frame", screenGui)
+frame.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame.Size = UDim2.new(0, 200, 0, 120)
+frame.BackgroundTransparency = 0.3
+frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+frame.Active = true
+frame.Draggable = true
+
+-- GUI Title
+local title = Instance.new("TextLabel", frame)
+title.Text = "Fly Gui Made By k00pder"
+title.Size = UDim2.new(1, 0, 0.2, 0)
+title.BackgroundTransparency = 1
+title.TextScaled = true
+title.TextColor3 = Color3.new(1, 1, 1)
+
+-- Speed TextBox
+local speedBox = Instance.new("TextBox", frame)
+speedBox.PlaceholderText = "Enter Speed"
+speedBox.Text = 50
+speedBox.Size = UDim2.new(1, -20, 0.3, 0)
+speedBox.Position = UDim2.new(0, 10, 0.3, 0)
+speedBox.TextScaled = true
+speedBox.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+speedBox.TextColor3 = Color3.new(1, 1, 1)
+
+-- Toggle Button
+local toggleButton = Instance.new("TextButton", frame)
+toggleButton.Text = "Enable"
+toggleButton.Size = UDim2.new(1, -20, 0.3, 0)
+toggleButton.Position = UDim2.new(0, 10, 0.65, 0)
+toggleButton.BackgroundColor3 = Color3.fromRGB(30, 150, 250)
+toggleButton.TextScaled = true
+toggleButton.TextColor3 = Color3.new(1, 1, 1)
+
+-- Fly function
+    local bodyGyro
+    local bodyVelocity
+    local runService = game:GetService("RunService")
+    
+    local function startFlying()
+        character = player.Character or player.CharacterAdded:Wait()
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+        
+        bodyGyro = Instance.new("BodyGyro")
+        bodyGyro.P = 9e4
+        bodyGyro.MaxTorque = Vector3.new(9e9, 9e9, 9e9)
+        bodyGyro.CFrame = humanoidRootPart.CFrame
+        bodyGyro.Parent = humanoidRootPart
+        
+        bodyVelocity = Instance.new("BodyVelocity")
+        bodyVelocity.Velocity = Vector3.new(0, 0, 0)
+        bodyVelocity.MaxForce = Vector3.new(9e9, 9e9, 9e9)
+        bodyVelocity.Parent = humanoidRootPart
+        
+        runService:BindToRenderStep("Fly", Enum.RenderPriority.Character.Value, function()
+            local camCF = workspace.CurrentCamera.CFrame
+            bodyVelocity.Velocity = camCF.LookVector * speed
+            bodyGyro.CFrame = camCF
+        end)
+    end
+    
+    local function stopFlying()
+        runService:UnbindFromRenderStep("Fly")
+        if bodyGyro then bodyGyro:Destroy() end
+            if bodyVelocity then bodyVelocity:Destroy() end
+            end
+                
+                -- Button click
+                toggleButton.MouseButton1Click:Connect(function()
+                    speed = tonumber(speedBox.Text) or 50
+                    flying = not flying
+                    if flying then
+                        startFlying()
+                        toggleButton.Text = "Disable"
+                    else
+                        stopFlying()
+                        toggleButton.Text = "Enable"
+                    end
+                end)
